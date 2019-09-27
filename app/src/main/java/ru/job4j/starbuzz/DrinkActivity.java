@@ -1,5 +1,6 @@
 package ru.job4j.starbuzz;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -67,10 +68,11 @@ public class DrinkActivity extends AppCompatActivity {
     }
 
     public void onFavoriteClicked(View view) {
-        int drinkNo = (Integer)getIntent().getExtras().get("drinkNo");
+        int drinkNo = (Integer) getIntent().getExtras().get("drinkNo");
         new UpdateDrinkTask().execute(drinkNo);
     }
 
+    @SuppressLint("StaticFieldLeak")
     private class UpdateDrinkTask extends AsyncTask<Integer, Void, Boolean> {
         ContentValues drinkValues;
 

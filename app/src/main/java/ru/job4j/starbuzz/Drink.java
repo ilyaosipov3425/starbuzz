@@ -1,5 +1,7 @@
 package ru.job4j.starbuzz;
 
+import android.support.annotation.NonNull;
+
 /**
  * Класс Drink - содержит данные напитков
  * @author Ilya Osipov (mailto:il.osipov.ya@yandex.ru)
@@ -39,6 +41,7 @@ public class Drink {
         return imageResourceId;
     }
 
+    @NonNull
     public String toString() {
         return this.name;
     }
